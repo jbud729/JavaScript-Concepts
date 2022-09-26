@@ -1,3 +1,3 @@
 # JavaScript-Concepts
 
-Learning JavaScript concepts along with small a exercise at the end of each concept. 
+Learning JavaScript concepts along with a small exercise at the end of each concept. 
