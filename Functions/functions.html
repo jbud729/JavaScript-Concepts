@@ -1,0 +1,132 @@
+<!--Funtion Syntax-->
+<script>
+  function ourReusableFunction() {
+    console.log("Hey, World");
+  }
+
+  function myReusableFunction() {
+    console.log(Hi, "Jeremy");
+  }
+
+  ourReusableFunction();
+</script>
+
+
+<!--Functions with Args-->
+<script>
+  function ourFunctionithArgs(a,b) {
+    console.log(a - b);
+  }
+
+  function myFunctionWithArgs(a, b) {
+    console.log(a + b);
+
+  }
+   
+  ourFunctionithArgs(3,2);
+  myFunctionWithArgs(5,2);
+</script>
+
+
+<!--Global Scope and Functions-->
+<script>
+  let myGlobal = 10; // this variable will be seen everywhere
+  function fun1() {
+    oopsGlobal = 5; // since there is nothing in front of
+                    // oopsGlobal, it will act as a 
+                    // global variable
+  }
+
+  function fun2() {
+    let output = "";
+    if (typeof myGlobal != "undefined") {
+      output += "myGlobal: " + myGlobal + "\n"; 
+    }
+    if (typeof oopsGlobal != "undefined") {
+      output += "oopsGlobal: " + oopsGlobal;
+    }
+    console.log(output);
+  }
+
+  fun1();
+  fun2();
+</script>
+
+
+<!--Local Scope and Functions-->
+<script>
+  function myLocalScope() {
+    let myVar = 5;
+    console.log(myVar);
+  }
+  myLocalScope();
+  //console.log(myVar); this code will display error since variable
+  // is a local variable. 
+</script>
+
+
+<!--Global vs Local-->
+<script>
+  let outerWear = "T-shirt"; //Global
+
+  function myOutfit() {
+    let outerWear = "sweater";//local
+
+    return outerWear;
+  }
+
+  console.log(myOutfit());//will print local variable
+  console.log(outerWear); //will print global variable
+</script>
+
+
+<!--Return a value from a Function with Return-->
+<script>
+  function minusSeven(num) {
+    return num - 7;
+  }
+  console.log(minusSeven(10));
+
+  function timesFive(num) {
+    return num * 5;
+  }
+  console.log(timesFive(5));
+</script>
+
+
+<!--Understanding Undefined Value Returned from a Function -->
+<script>
+  let sum = 0;
+  function addThree() {
+    sum = sum + 3; // return value will be undefned since
+                  // "return" value is not specified.
+  }
+
+  function addFive() {
+    sum += 5; // also will not return anything 
+  }
+</script>
+
+
+<!--Assignment with a returned variable-->
+<script>
+  let changed = 0;
+
+  function change(num) {
+    return (num + 5) / 3;
+  }
+
+  changed = change(10);
+
+  let processed = 0;
+
+  function processArg(num) {
+    return (num + 3) / 5;
+  }
+
+  processed = processArg(7);
+  </script>
+
+
+
+

@@ -1,0 +1,184 @@
+<!--Boolean Values-->
+<script>
+  function welcomeToBooleans() {
+    return false;
+  }
+ </script>
+
+<!--If Statements-->
+<script>
+  function ourTrueOrFalse(isItTrue) {
+    if (isItTrue) {
+      return "Yes it is true";
+    }
+    return "No, it's false";
+  }
+
+  function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+      return "Yes, that was true";
+    }
+    return "No, that as false";
+  }
+
+  console.log(ourTrueOrFalse(true));
+  console.log(trueOrFalse(true));
+</script>
+
+
+<!--Comparison with the Equality Operator-->
+<script>
+  function testEqual(val) {
+    if (val == 12) { // double equals convert both 
+                    // items to same data type, then compare
+                    // 3 == "3" => true
+      return true;
+    }
+    return "Not Equal";
+  }
+  console.log(testEqual("12"));
+</script>
+
+
+
+<!--Comparison with the Strict Equality Operator-->
+<script>
+  function testStrict(val) {
+    if (val === 7) { // Triple equals DOES NOT!
+                      // 3 === "3" => false
+      return "Equal";
+    }
+    return "Not Equal";
+  }
+  console.log(testStrict("7"));
+</script>
+
+<!--Practice Comparing Different Values-->
+<script>
+  function compareEquality(a,b) {
+    if (a == b) { // "==" => true "===" => false
+      return "Equal";
+    }
+    return "Not Equal";
+  }
+
+  console.log(compareEquality(10, "10"));
+</script>
+
+<!--Comparison with the Inequality Operator-->
+<script>
+  function testNotEqual(val) {
+    if (val != 99) {
+      return "Not Equal";
+    }
+    return "Equal";
+  }
+
+  console.log(testNotEqual(99));
+</script>
+
+
+<!--Comparison with the Strict Inequality Operator-->
+<script>
+  function testStrictNotEqual(val) {
+
+    if (val !== 17) { // Same concept as strict equality
+
+      return "Not Equal";
+    }
+    return "Equal";
+  }
+  console.log(testStrictNotEqual("17"));
+</script>
+
+
+
+<!--Comparisons with the Greater Than Operator-->
+<script>
+  function testGreaterThan(val) {// Same Concept for less than
+    if (val > 100 ) {
+      return "Over 100";
+    }
+
+    if (val > 10) {
+      return "Over 10";
+    }
+
+    return "10 or under";
+  }
+  console.log(testGreaterThan(10));
+</script>
+
+
+<!--Comparisons with the Greater Than Or Equal To Operator-->
+<script>
+  function testGreaterOrEqual(val) {  // Same concept for less than
+    if (val >= 20) {
+      return "20 or Over";
+    }
+
+    if (val >= 10) {
+      return "10 or Over";
+    }
+
+    return "Less than 10";
+  }
+  console.log(testGreaterOrEqual(10));
+</script>
+
+
+<!---Comparisons with the Logical "AND" Operator-->
+<script>
+  function testLogicalAnd(val) {
+    if (val <= 50 && val >= 25)  {
+      return "Yes";
+  }
+  return "No";
+}
+console.log(testLogicalAnd(30));
+</script>
+
+
+<!---Comparisons with the Logical "OR" Operator-->
+<script>
+  function testLogicalOR(val) {
+    if (val < 10 || val > 20) {
+      return "Outside";
+    }
+    return "Inside";
+  }
+  console.log(testLogicalOR(18));
+</script>
+
+
+<!--Returning Boolean Values from Functions-->
+<script>
+  function isLess(a,b) {
+    /*
+    if (a < b) {
+      return true;
+    } else {
+      return false;
+    }
+  *///  We can easily shorten this code due to the fact that all comparison operators return a boolean true or false value
+
+  // We can just do this 
+  return a < b;
+  }
+  console.log(isLess(20, 15));
+</script>
+
+
+<!--Returning Early Pattern from Functions-->
+<script>
+  function abTest(a,b) {
+    if (a < 0 || b < 0) {
+      return undefined; // We can leave a function early with "return". 
+    }
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+  }
+  console.log(abTest(-2,2));
+</script>
+
+
+

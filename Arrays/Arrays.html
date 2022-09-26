@@ -1,0 +1,78 @@
+<script>
+
+  // Array structure (can have diff data types)
+  let ourArray = ["John,", 23]; 
+  let myArray = ["Jeremy", 1];
+</script>
+
+<!--Nested Arrays-->
+<script>
+  let ournestArray = [["the universe", 42], ["everything", 101010]];
+  let mynestArray = [["Bulls", 23], ["White Sox", 45]]; 
+</script>
+
+<!--Access Array Data with Indexes-->
+<script>
+  ourArray = [50,60,70];
+  let ourData = ourArray[0]; // 50
+
+  myArray = [50,60,70];
+  let myData = ourArray[1]; // 60
+  console.log(myData);
+</script>
+
+<!--Modify Array with Indexes-->
+<script>
+  ourArray = [50,60,70];
+  ourArray[1] = 45; // second number now 45
+
+  myArray = [80,90,100];
+  myArray[0] = 45; // 1st number now 45
+  console.log(myArray);
+</script>
+
+<!--Access Multi-Dimensional Arrays with Indexes-->
+<script>
+  myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+  //myArray.push([[10,11,12], 13, "Jeremy"]);
+  //myArray[4][2] = "Bobby";
+  console.log(myArray[3][2]);
+</script>
+
+<!--Manipulate Arrays with push() (Add item at end of array)-->
+<script>
+  ourArray = ["Stimpson", "J", "cat"];
+  ourArray.push(["happy", "joy"]);
+
+  myArray = [["John", 23], ["cat", 2]];
+  myArray.push(["dog", 3]);
+</script>
+
+<!--Manipulate Arrays with pop() (Remove item at end of array)-->
+<script>
+  ourArray = [1,2,3];
+  let removedFromOurArray = ourArray.pop();
+
+  myArray = [["John", 23], ["cat", 2]];
+  let removedFromMyArray = myArray.pop();
+</script>
+
+<!--Manipulate Arrays with shift() (Removes the first element of array)-->
+<script>
+  ourArray = ["Stimpson", "J", "cat"];
+  removedFromOurArray = ourArray.shift();
+
+  myArray = [["John", 23], ["dog", 2]];
+  removedFromMyArray = myArray.shift();
+</script>
+
+<!--Manipulate Arrays with unshift() (Adds an element at the beginning of array)-->
+<script>
+  ourArray = ["Stimpson", "J", "cat"];
+  ourArray.shift();
+  let insertOurItemInBeginning = ourArray.unshift("Jack");
+
+  myArray = [["John", 23], ["dog", 2]];
+  myArray.shift();
+  let insertMyItemInBeginning = myArray.unshift(["Jack", 12]);
+</script>

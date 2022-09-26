@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head></head>
+
+  <body>
+    <script>
+      // Using backslash then double quotes to have double quotes inside
+      //double quotes. 
+      var myStr = "I am a \"double quoted\" string inside \"double quotes\"";
+      console.log(myStr);
+
+      // Using single quotes to ignore the double quotes inside. 
+      var myStr = 'I am a "double quoted" string inside "double quotes"';
+      console.log(myStr);
+
+      // Using special characters in strings 
+      var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+      console.log(myStr);
+
+      // Concatenating items together with "+" sign. 
+      var myStr = "I come first. " + "I come second.";
+      console.log(myStr);
+
+      // Using "+=" to concatenate strings 
+      var ourStr = "I come first. ";
+      ourStr += "I come second."
+      console.log(ourStr);
+
+      //Concatenate String with variables 
+      var myName = "Jeremy";
+      var myStr = "My name is " + myName + " and I am well!";
+      console.log(myStr);
+
+      //Find length of a string 
+      var myName = "Jeremy";
+      console.log(myName + " has " + myName.length + " letters!");
+
+      //Bracket Notation to get first character in string 
+      var myName = "Jeremy"
+      console.log(myName[1]);
+
+    </script>
+  </body>
+</html>
