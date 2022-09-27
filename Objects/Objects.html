@@ -42,3 +42,116 @@
 
   console.log(entreeValue + " " + drinkValue);
 </script>
+
+
+<!--Accessing Object Properties with Variables-->
+<script>
+  testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+  };
+
+  let playerNumber = 16;
+  let player = testObj[playerNumber];
+  console.log(player);
+</script>
+
+
+<!--Updating Object Properties-->
+<script>
+  ourDog = {
+    name: "Camper",
+    legs: 4,
+    tails: 1,
+    friends: ["everything!"]
+  };
+
+  ourDog.name = "Happy Camper";
+
+  myDog = {
+    name: "Jay",
+    legs: 4,
+    tails: 2,
+    friends: ["Jimmy"]
+  }
+
+  myDog.name = "Joey";
+
+  console.log(ourDog.name);
+  console.log(myDog.name);
+</script>
+
+
+<!--Add New Properties to an Object-->
+<script>
+  ourDog = {
+    name: "Camper",
+    legs: 4,
+    tails: 1,
+    friends: ["everything!"]
+  };
+
+  // Adding "bark" property with dot notation 
+  ourDog.bark = "bow-wow";
+
+  myDog = {
+    name: "Jay",
+    legs: 4,
+    tails: 2,
+    friends: ["Jimmy"]
+  }
+
+  // Adding "bark" property with bracket notation
+  myDog['bark'] = "woof!"; 
+
+  console.log(ourDog);
+</script>
+
+
+<!--Delete Properties from an Object-->
+<script>
+  ourDog = {
+    name: "Camper",
+    legs: 4,
+    tails: 1,
+    friends: ["everything!"],
+    bark: "bow-wow"
+  };
+
+  delete ourDog.bark;
+
+  myDog = {
+    name: "Jay",
+    legs: 4,
+    tails: 2,
+    friends: ["Jimmy"],
+    bark: "woof!"
+  }
+  delete myDog.bark;
+  delete myDog.tails; 
+
+  console.log(ourDog);
+</script>
+
+
+<!--Using Objects for Lookups-->
+<script>
+  function phoneticLookup(val) {
+    let result = "";
+
+    let lookup = {
+      alpha: "Adams",
+      bravo: "Boston",
+      charlie: "Chicago",
+      delta: "Denver", 
+      echo: "Easy",
+      foxtrot: "frank"
+    };
+    result = lookup[val];
+    return result;
+  }
+  console.log(phoneticLookup("alpha"));
+  console.log(phoneticLookup("bravo"));
+</script>
+
