@@ -174,3 +174,63 @@
   }
   console.log(checkObj("hello"));
 </script>
+
+
+<!--Manipulating Complex Objects-->
+<script> 
+  let myMusic = [
+    {
+      artist: "Bill Joel",
+      title: "Piano Man",
+      release_year: 1973,
+      formats: ["CD", "8T", "LP"],
+      gold: true
+    },
+
+    {
+      artist: "Beau Carnes",
+      title: "Cereal Man",
+      release_year: 2003,
+      formats: ["Youtube video"]
+    }
+  ];
+</script>
+
+
+<!--Nested Objects-->
+<script>
+  let myStorage = {
+    car: {
+      inside: {
+        glove_box: "maps",
+        passenger_seat: "crumbs"
+      },
+      outside: {
+        trunk: "jack"
+      }
+    }
+  };
+
+  let gloveBoxContents = myStorage.car.inside.glove_box;
+  console.log(gloveBoxContents);
+  gloveBoxContents = myStorage.car.inside["passenger_seat"];
+  console.log(gloveBoxContents);
+</script>
+
+
+<!--Accessing Nested Arrays-->
+<script>
+  let myPlants = [
+    {
+      type: "flowers",
+      list: ["rose", "tulip", "dandelion"]
+    },
+
+    {
+      type: "trees",
+      list: ["fir", "pine", "birch"]
+    }
+  ];
+let secondTree = myPlants[1].list[1];
+console.log(secondTree);
+</script>
