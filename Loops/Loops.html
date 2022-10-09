@@ -23,3 +23,87 @@
   console.log("ourArray: "+ ourArray);
   console.log("myArrayTwo: " + myArrayTwo);
 </script>
+
+
+<!--Iterate Odd/Even Numbers with a For Loop-->
+<script>
+  ourArray = [];
+  for (let i = 0; i < 10; i += 2) {
+    ourArray.push(i);
+  }
+
+  console.log(ourArray);
+
+  myArray = [];
+  for (let i = 1; i < 10; i += 2) {
+    myArray.push(i);
+  }
+  console.log(myArray);
+</script>
+
+
+<!--Count Backwards with a For Loop-->
+<script>
+  ourArray = [];
+  for (let i = 10; i > 0; i -=2) {
+    ourArray.push(i);
+  }
+  console.log(ourArray);
+
+  myArray = [];
+  for (let i = 9; i > 0; i -=2) {
+    myArray.push(i);
+  }
+  console.log(myArray);
+</script>
+
+
+<!--Iterate Through an Array with a For Loop--> 
+<script>
+  ourArray = [9, 10, 11, 12];
+  let ourTotal = 0;
+  for (let i = 0; i < ourArray.length; i++) {
+    ourTotal += ourArray[i];
+  }
+  console.log(ourTotal);
+
+  myArray = [2,3,4,5,6];
+  let total = 0;
+  for ( let i = 0; i < myArray.length; i++) {
+    total += myArray[i];
+  }
+  console.log(total);
+</script>
+
+
+<!--Nesting Foe Loops-->
+<script>
+  function multiplyAll(arr) {
+    let product = 1;
+
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+        product *= arr[i][j];
+      }
+    }
+ 
+    return product;
+  }
+
+  let product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+  console.log(product);
+</script>
+
+
+<!--Iterate with Do...While Loops--> 
+<script>
+   myArray = [];
+   i = 10;
+  do {
+    myArray.push(i);
+    i++;
+  } while (i < 5)
+
+  console.log(i, myArray);
+</script>
+
