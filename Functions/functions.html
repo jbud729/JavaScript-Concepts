@@ -130,10 +130,20 @@
 
 <!--Use the parseInt Function -->
 <script>
-  function convertoIntger(str) {
+  function convertoInteger(str) {
     return parseInt(str);
   }
-  console.log(convertoIntger("56"));
+  console.log(convertoInteger("56"));
+</script>
+
+
+<!-- Use the parseInt Function with a Radix-->
+<script>
+  function convertoInteger(str) {
+    return parseInt(str, 2); // Added 2 for base 2 since str is 
+                            //binary number
+  }
+  console.log(convertoInteger("10011")); //Convert binary to integer
 </script>
 
 
