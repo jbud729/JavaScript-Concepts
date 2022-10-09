@@ -181,4 +181,38 @@ console.log(testLogicalAnd(30));
 </script>
 
 
+<!--Use the Conditional (Ternary) Operator-->
+<script>
+  // Standard way if writing a conditional statement
+ /* function checkEqual(a, b) {
+    if(a === b) {
+      return true; 
+    } else {
+      return false;
+    }
+  } */
+
+  // "Return" Way
+  /*function checkEqual(a, b) {
+    return a === b;
+  }*/
+
+  // Ternary Way
+  // condition ? statement-if-true : statement-if-false; 
+  function checkEqual(a, b) {
+    return a === b ? true : false; 
+  }
+</script>
+
+
+<!--Use Multiple Conditional (Ternary) Operators-->
+<script>
+  function checkSign(num) {
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+  }
+
+  console.log(checkSign(0));
+</script>
+
+
 
