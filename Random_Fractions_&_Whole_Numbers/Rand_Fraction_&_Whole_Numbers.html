@@ -1,0 +1,41 @@
+<!--Generate Random Fractions-->
+<script>
+  function randomFraction() {
+
+
+    return Math.random(); // Will always be a number between 0 and 1
+                          // Can be 0 but cannot be 1
+  }
+
+  console.log(randomFraction());
+</script>
+
+
+<!--Generate Random Whole Numbers-->
+<script>
+  let = randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+
+  function randomWholeNum() {
+
+    return Math.floor(Math.random() * 10); //Rand num between 0 and 9
+  }
+  console.log(randomWholeNum());
+</script>
+
+
+<!--Generate Random Whole Numbers within a Range-->
+<script>
+  function ourRandomRange(ourMin, ourMax) {  
+
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+  }
+  console.log(ourRandomRange(2,9));
+
+
+  function randomRange(myMin, myMax) {
+
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  }
+  let myRandom = randomRange(5,15); 
+  console.log(myRandom);
+</script>
