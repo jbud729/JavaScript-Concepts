@@ -234,3 +234,25 @@
 let secondTree = myPlants[1].list[1];
 console.log(secondTree);
 </script>
+
+
+<!--Prevent Object Mutation--> 
+
+<script>
+  function freezeObj() {
+    "use strict";
+    const MATH_CONSTANTS = {
+      PI: 3.14
+    };
+
+    Object.freeze(MATH_CONSTANTS); // USE Object.freeze to 
+                                  // prevent object mutation
+    try {
+      MATH_CONSTANTS.PI = 99;
+    } catch(ex) {
+      console.log(ex);
+    }
+
+  }
+  const PI = freezeObj();
+</script>
