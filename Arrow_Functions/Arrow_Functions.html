@@ -1,0 +1,48 @@
+<!--Use Arrow Functions to Write Concise Anonymous Functions-->
+<script>
+  /* Anonymous Function 
+  let magic = function() {
+    return new Date(); 
+  };*/
+
+  const magic = () => new Date();
+  console.log(magic());
+</script>
+
+
+<!--Write Arrow Functions with Parameters-->
+<script>
+
+  /* Will convert into arrow function 
+  let myConcat = function(arr1, arr2) {
+    return arr1.concat(arr2);
+  };*/
+
+  //Arrow Function 
+  const myConcat = (arr1, arr2) => arr1.concat(arr2);
+  console.log(myConcat([1,2], [3,4,5]));
+</script>
+
+<!--Write Higher Order Arrow Functions-->
+<script>
+  const realNumArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+  const squareList = (arr) => {
+    const squaredIntegers = arr.filter(num => 
+    Number.isInteger(num) && num > 0).map(x => x * x); //
+    return squaredIntegers;
+  };
+  const squaredIntegers = squareList(realNumArray);
+  console.log(squaredIntegers);
+</script>
+
+<!--Default parameters-->
+<script>
+  const increment = (function() {
+    return function increment(number, value = 1) {
+      return number + value; 
+    };
+  })();
+  console.log(increment(5,2));
+  console.log(increment(5));
+</script>
