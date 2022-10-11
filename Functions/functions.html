@@ -148,4 +148,30 @@
 
 
 
+<!--Default parameters-->
+<script>
+  const increment = (function() {
+    return function increment(number, value = 1) {
+      return number + value; 
+    };
+  })();
+  console.log(increment(5,2));
+  console.log(increment(5));
+</script>
+
+
+<!--Use the Rest Operator with the Function Parameters-->
+<script>
+   sum = (function() {
+    return function sum(...args) {//...args (Rest Op) will convert everything
+                                  //that is passed into an array called args
+      //const args = [x, y, z]; Do not need this line any more
+      return args.reduce((a, b) => a + b, 0);
+    };
+  })();
+  console.log(sum(1,2,4,5,6)); //We can also add any amount of 
+                              //numbers into the parameter due to the Rest Operator 
+</script>
+
+
 
