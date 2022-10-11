@@ -174,4 +174,18 @@
 </script>
 
 
+<!--Use the Spread Operator to Evaluate Arrays In-Place-->
+
+<script>
+  const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+  let arr2;
+  (function() {
+    //arr2 = arr1; Can remove
+    arr2 = [...arr1]; // Syntax for Spread Operator. This will copy arr1.
+                      // Even if arr1 values are changed, arr2 will still have the OG arr1 array. 
+    arr1[0] = 'potato'; // Will change arr1 but nor arr2
+  })();
+  console.log(arr2);
+</script>
+
 
