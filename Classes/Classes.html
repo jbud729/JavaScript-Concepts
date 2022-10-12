@@ -1,0 +1,75 @@
+<script>
+
+  // Old way
+  /*
+  let SpaceShuttle = function(targetPlanet) {
+    this.targetPlanet = targetPlanet; 
+  }
+  let zeus = new SpaceShuttle('Jupiter');*/
+
+  //Class Syntax
+
+  class SpaceShuttle {
+    constructor(targetPlanet) {
+      this.targetPlanet = targetPlanet;
+    }
+  }
+  let zeus = new SpaceShuttle('Jupiter');
+  console.log(zeus.targetPlanet);
+
+
+  function makeClass() {
+    class Vegetable {
+      constructor(name){
+        this.name = name;
+      }
+    }
+    return Vegetable; 
+  }
+  const Vegetable = makeClass();
+  const carrot = new Vegetable("carrot");
+  console.log(carrot.name);
+</script>
+
+
+<!--Use getters and setters to Control Access to an Object-->
+<script>
+   class Book {
+    constructor(author) {
+      this._author = author;
+    }
+    // getter
+    get writer() {
+      return this._author;
+    }
+    // setter 
+    set writer(updateAuthor) {
+      this._author = updateAuthor;
+    }
+   }
+
+   function makeClasss() {
+    class Thermostat {
+      constructor(temp) {
+        this._temp  = 5/9 * (temp - 32);// underscore signifies that it is a private variable
+      }
+
+      get temperature() {
+        return this._temp;
+      }
+
+      set temperature(updatedTemp) {
+        this._temp = updatedTemp; 
+      }
+    }
+
+    return Thermostat; 
+   }
+
+   const Thermostat = makeClass();
+   const thermos = new Thermostat(76); 
+   let temp = thermos.temperature; 
+   thermos.temperature = 26;
+   temp = thermos.temperature; 
+   console.log(temp);
+</script>
