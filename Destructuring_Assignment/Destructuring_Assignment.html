@@ -1,3 +1,104 @@
 <script>
-  
+  let voxel = {x: 3.6, y: 7.4, z: 6.54};
+
+  // Standard way of declaring variables for voxel object
+  let x = voxel.x;
+  let y = voxel.y;
+  let z = voxel.z;
+
+  const {x : a, y : b, z : c} = voxel; //Destructuring Syntax
+                                      // a = 3.6, b = 7.4, c = 6.54
+
+  const AVG_TEMPERATURE = {
+    today: 77.5,
+    tomorrow: 79
+  };
+
+  function getTempOfTmrw(avgTemperatures) {
+    "use strict";
+
+    const { tomorrow : tempOfTomorrow } = avgTemperatures;
+    return tempOfTomorrow;
+  }
+
+  console.log(getTempOfTmrw(AVG_TEMPERATURE));
+</script>
+
+<!--Destructuring Assignment with Nested Objects-->
+<script>
+  const LOCAL_FORECAST = {
+    today: {min: 72, max: 83}, 
+    tomorrow: {min: 73.3, max: 84.6}
+  };
+
+  function getMaxOfTmrw (forecast) {
+    "use strict";  
+
+    const { tomorrow : {max : maxOfTomorrow}} = forecast; 
+
+    return maxOfTomorrow;
+  }
+
+  function getMaxOfTdy (forecast) {
+    "use strict";  
+
+    const { today : {max : maxOfToday}} = forecast; 
+
+    return maxOfToday;
+  }
+  console.log(getMaxOfTmrw(LOCAL_FORECAST));
+  console.log(getMaxOfTdy(LOCAL_FORECAST));
+</script>
+
+
+<!--Use Destructuring Assignment to Assign Variables from Arrays-->
+<script>
+  // Unlike objects, you cannot specify which element in the array goes into a variable
+  //It will just go in order
+  //If we wanted 4 to go in a variable, we can add some commas.
+  const [h, i, , j] = [1,2,3,4,5,6];
+  console.log(h,i,j);
+
+
+  let l = 8, m = 6;
+  (() => {
+    "use strict";
+    [l, m] = [m, l]; // Destructuring syntax for switching values in an array
+  })();
+  console.log(l); // will now be 6
+  console.log(m); // will now be 8
+</script>
+
+
+<!--Use Destructuring Assignment with the Rest Operator-->
+<script>
+  const source = [1,2,3,4,5,6,7,8,9,10];
+  function removeFirstTwo(list) {
+
+    const [, ,...arr] = list; // The two commas are for ignoring the first two elements
+
+    return arr; 
+  }
+  const arr = removeFirstTwo(source);
+  console.log(arr);
+  console.log(source);
+</script>
+
+<!--Use Destructuring Assignment to Pass an Object as a Function's Parameters-->
+<script>
+  const stats = {
+    max: 56.78,
+    standard_deviation: 4.36, 
+    median: 34.54,
+    mode: 23.87,
+    min: -0.75,
+    average: 35.85
+  };
+  const half = (function() {
+    return function half({max, min}) { // Syntax for Destructuring in Parameters in Functions
+      return (max + min) / 2.0
+    };
+  })();
+  console.log(stats);
+  console.log(half(stats));
 </script>
